@@ -10,12 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 
     <style>
+    body, html {
+      height: 100%;
+    }
 
-    .hero-txt {
+    .text {
       text-align: center;
       position: relative;
       font-size: 32px;
       color: white;
+      font-family: 'Space Mono', monospace;
+    }
+    #text-sub {
+      text-align: center;
+      position: relative;
+      font-size: 16px;
+      color: white;
+      text-decoration: overline;
       font-family: 'Space Mono', monospace;
     }
     .hero-img {
@@ -31,6 +42,58 @@
     a:hover {
       text-decoration: none;
     }
+    .about {
+      padding-top:10%;
+      padding-bottom: 15%;
+      font-family: 'Space Mono', monospace;
+      font-size: 18px;
+      align-content: center;
+    }
+    .contact {
+      box-sizing: border-box;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 3%;
+      position: relative;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),url(https://wallpapercave.com/wp/wp2848536.jpg);
+      min-height: 65%;
+    }
+    #form {
+      position: absolute;
+      margin: 20px;
+      max-width: 300px;
+      padding: 16px;
+      background-color: white;
+      border-radius: 5px;
+    }
+    #form p {
+      color: black;
+    }
+    #form #msg {
+      padding-top:2em;
+      padding-bottom:2em;
+    }
+    input[type=text] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      border-color:  black;
+    }
+    .btn {
+      background-color: grey;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    .btn:hover {
+      opacity: 1;
+    }
+
 
     </style>
   </head>
@@ -58,8 +121,9 @@
         </ul>
       </div>
     </nav>
+
     <div class="hero-img">
-      <div class="hero-txt container">
+      <div class="text container">
         <ul>
           <p id="name">Ronaldo Cedras</p>
           <p id="based">South Africa, WC</p>
@@ -81,14 +145,29 @@
       </div>
     </div>
 
-  <div id="contact justify center">
-    <form action="http://127.0.0.1:5000/sent" method="POST">
-      <input type="text" name="sender">
-      <input type="text" name="mail">
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+    <div class="container col-sm-5" id="about">
+      <p class="about"> Hi, I am a Computer Science student with an interest in front-end
+        web development and software solutions. I am always eager to learn and
+        discover new technologies to bring your ideas to life.
+      </p>
+    </div>
 
+    <div class="contact">
+      <h2 class="text">Contact me</h2>
+      <p class="text" id="text-sub">For Colabarations, business ventures or work opperturnity</p>
+      <div class="row justify-content-center form-group">
+        <form action="http://127.0.0.1:5000/sent" method="POST">
+          <div class="sm-3" id="form">
+            <label for="email"><p class="text">Email</p></label>
+            <input type="text" name="sender">
+            <label for="msg"><p class="text"  >Message</p></label>
+            <input type="text" name="mail" id="msg">
+            <br>
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </form>
+      </div>
+      </div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
