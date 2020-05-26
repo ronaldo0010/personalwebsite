@@ -4,16 +4,33 @@
     <title>Dev Page</title>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 
     <style>
-    body, html {
+    html,body {
+      width: 100%;
       height: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+
+    }
+    ::-webkit-scrollbar-track {
+      background: grey;
     }
 
+    ::-webkit-scrollbar-thumb {
+      background: rgba(74, 74, 74, 1.3);
+      border-radius: 20px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0,0,0, 0.6);
+      border-radius: 20px;
+    }
     .text {
       text-align: center;
       position: relative;
@@ -35,7 +52,7 @@
     .hero-img {
       background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)),
       url(https://cdn.pixabay.com/photo/2016/02/19/11/19/computer-1209641_960_720.jpg);
-      background-position: center;
+      background-position:center;
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
@@ -47,7 +64,7 @@
     }
     .about {
       padding-top:10%;
-      padding-bottom: 15%;
+      margin-bottom: 10%;
       font-family: 'Space Mono', monospace;
       font-size: 18px;
       align-content: center;
@@ -58,7 +75,7 @@
       background-repeat: no-repeat;
       padding-top: 3%;
       position: relative;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),url(https://wallpapercave.com/wp/wp2848536.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),url(https://wallpapercave.com/wp/wp2848536.jpg);
       min-height: 65%;
     }
     #form {
@@ -96,35 +113,43 @@
       opacity: 1;
     }
 
+    #stack{
+      padding-top: 2%;
+      padding-bottom: 2%;
+    }
+    #stack img {
+      margin-left: 1%;
+      margin-top: 2%;
+    }
 
     </style>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <a class="navbar-brand text-white">Software Solutions</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5000/#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="http://127.0.0.1:5000/projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="http://127.0.0.1:5000/#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="http://127.0.0.1:5000/#contact">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="hero-img">
+    <div class="hero-img" id="home">
       <div class="text container">
         <ul>
           <p id="name">Ronaldo Cedras</p>
@@ -153,8 +178,20 @@
         discover new technologies to bring your ideas to life.
       </p>
     </div>
+    <span id="stack" class="row justify-content-center">
 
-    <div class="contact">
+      <img width="45" height="50" src="https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png"></img>
+      <img width="60" height="50" src="https://cdn.onlinewebfonts.com/svg/img_411892.png"></img>
+      <img width="50" height="50" src="http://clipart-library.com/new_gallery/289-2896071_python-logo-png-165709.png"></img>
+      <img width="80" height="50" src="https://miro.medium.com/max/876/1*0G5zu7CnXdMT9pGbYUTQLQ.png"></img>
+      <img width="50" height="50" src="https://cdn.worldvectorlogo.com/logos/flutter.svg"></img>
+      <img width="50" height="50" src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/ubuntu-512.png"></img>
+      <img width="50" height="50" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/96-html5-512.png"></img>
+      <img width="50" height="50" src="https://cdn4.iconfinder.com/data/icons/blackicon/54/css3_icon-512.png"></img>
+
+    </span>
+
+    <div class="contact" id="contact">
       <h2 class="text">Contact me</h2>
       <p class="text" id="text-sub">For Colabarations, business ventures or work opperturnity</p>
       <section class="row justify-content-center">
