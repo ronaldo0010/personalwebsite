@@ -29,6 +29,9 @@
       text-decoration: overline;
       font-family: 'Space Mono', monospace;
     }
+    nav {
+      position: absolute;
+    }
     .hero-img {
       background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)),
       url(https://cdn.pixabay.com/photo/2016/02/19/11/19/computer-1209641_960_720.jpg);
@@ -59,7 +62,6 @@
       min-height: 65%;
     }
     #form {
-      position: absolute;
       margin: 20px;
       max-width: 300px;
       padding: 16px;
@@ -73,7 +75,7 @@
       padding-top:2em;
       padding-bottom:2em;
     }
-    input[type=text] {
+    .input[type=text] {
       width: 100%;
       padding: 15px;
       margin: 5px 0 22px 0;
@@ -155,18 +157,19 @@
     <div class="contact">
       <h2 class="text">Contact me</h2>
       <p class="text" id="text-sub">For Colabarations, business ventures or work opperturnity</p>
-      <div class="row justify-content-center form-group">
-        <form action="http://127.0.0.1:5000/sent" method="POST">
+      <section class="row justify-content-center">
+        <form class= "form-container" action="http://127.0.0.1:5000/sent" method="POST">
           <div class="sm-3" id="form">
             <label for="email"><p class="text">Email</p></label>
-            <input type="text" name="sender">
+            <input class= "input" type="text" name="sender">
             <label for="msg"><p class="text"  >Message</p></label>
-            <input type="text" name="mail" id="msg">
+            <textarea class ="input" type="text" name="mail" rows="3"></textarea>
             <br>
             <button type="submit" class="btn">Submit</button>
           </div>
         </form>
-      </div>
+      </section>
+
       </div>
 
 
