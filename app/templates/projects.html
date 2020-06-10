@@ -1,1 +1,84 @@
-<h1>ADD PROJECTS</h1>
+{% extends "base.html"%}
+{% block content %}
+  <div class="container">
+
+    <style media="screen">
+      #card {
+        transition: transform .2s;
+        position:relative;
+        color : red;
+      }
+
+      #card:hover {
+        transform: scale(1.2);
+        position:relative;
+      }
+
+      #ind_cards {
+        position: relative;
+        height: 60%;
+        width: 80%;
+        margin-top: 3em;
+        margin-bottom: 0.5em;
+      }
+
+      #head {
+        color: black;
+        background-color: rgba(211,211,211,0.0);
+        font-family: 'Space Mono', monospace;
+      }
+
+    </style>
+
+
+      <div class="card container bg-light" id="ind_cards">
+        <h5 class="card-header" id="head" >NY Times API</h5>
+          <img id="card" class="card-img" src="{{ url_for('static', filename='/images/movie.jpg') }}" >
+          <div class="card-body">
+            <p class="card-text">
+              The NYT project thought me how to use web API's
+              and steal content from websites with BS4.
+            </p>
+            <p class="card-text">
+              Programming language: Python 3
+            </p>
+            <a href="https://github.com/ronaldo0010/rw334-projects" class="btn btn-success">See code</a>
+          </div>
+      </div>
+
+      <div class="card container bg-light" id="ind_cards">
+        <h5 class="card-header" id="head">TheShed Mobile App</h5>
+          <img id="card" class="card-img" src="{{ url_for('static', filename='/images/theShed.jpg') }}" >
+          <div class="card-body">
+            <p class="card-text">
+              For this project I learned flutter and dart for front-end development
+              Thus enabling me to write an android and ios app with the same code base.
+              In addition, i learned how to use Hive - a flutter package that
+              enabled me to store data on the users phone instead of
+              sharedpreferences.
+            </p>
+            <p class="card-text">
+              Programming language: Dart
+            </p>
+            <a href="https://github.com/ronaldo0010/TheShed" class="btn btn-success">See code</a>
+          </div>
+      </div>
+
+      <div class="card container bg-light" id="ind_cards">
+        <h5 class="card-header" id="head">Flask E-mail</h5>
+          <img id="card" class="card-img" src="{{ url_for('static', filename='/images/flask.png') }}" >
+          <div class="card-body">
+            <p class="card-text">This is a "contact me" forum, implemented by
+              myself since I want potential clients/employers to interact with
+              me directly
+            </p>
+            <p class="card-text">
+              Programming language: Python 3
+            </p>
+            <a href="https://github.com/ronaldo0010/personalwebsite" class="btn btn-success">See code</a>
+          </div>
+      </div>
+
+
+  </div>
+{% endblock %}

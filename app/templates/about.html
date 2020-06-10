@@ -1,0 +1,42 @@
+{% extends "base.html"%}
+{% block content %}
+
+<div class="container col-sm-5" id="about">
+  <p class="about"> Hi, I am a Computer Science student with an interest in front-end
+    web development and software solutions. I am always eager to learn and
+    discover new technologies to bring your ideas to life.
+  </p>
+</div>
+<span id="stack" class="row justify-content-center">
+
+  <img width="45" height="50" src="https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png"></img>
+  <img width="60" height="50" src="https://cdn.onlinewebfonts.com/svg/img_411892.png"></img>
+  <img width="50" height="50" src="http://clipart-library.com/new_gallery/289-2896071_python-logo-png-165709.png"></img>
+  <img width="80" height="50" src="https://miro.medium.com/max/876/1*0G5zu7CnXdMT9pGbYUTQLQ.png"></img>
+  <img width="50" height="50" src="https://cdn.worldvectorlogo.com/logos/flutter.svg"></img>
+  <img width="50" height="50" src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/ubuntu-512.png"></img>
+  <img width="50" height="50" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/96-html5-512.png"></img>
+  <img width="50" height="50" src="https://cdn4.iconfinder.com/data/icons/blackicon/54/css3_icon-512.png"></img>
+
+</span>
+
+
+<div class="contact" id="contact">
+  <h2 class="text">Contact me</h2>
+  <p class="text" id="text-sub">For Colabarations, business ventures or work opperturnity</p>
+  <section class="row justify-content-center">
+    <form class= "form-container" action="http://127.0.0.1:5000/sent" method="POST">
+      <div class="sm-3" id="form">
+        <label for="email"><p class="text">Email</p></label>
+        <input class= "input" type="text" name="sender">
+        <label for="msg"><p class="text"  >Message</p></label>
+        <textarea class ="input" type="text" name="mail" rows="3"></textarea>
+        <br>
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+  </section>
+
+</div>
+
+{% endblock %}

@@ -2,13 +2,12 @@ from app import app, mail
 from flask_mail import Mail, Message
 from flask import Flask, render_template, request
 
-
 @app.route('/', methods = ['POST', 'GET'])
 def index():
-    return render_template('index.html')
+    return render_template('about.html')
 
 
-@app.route('/projects')
+@app.route('/projects', methods = ['GET'])
 def projects():
     return render_template('projects.html')
 
