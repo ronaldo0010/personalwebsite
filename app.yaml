@@ -1,2 +1,2 @@
 runtime: python37
-entrypoint: python run.py
+entrypoint: python3 run.py
