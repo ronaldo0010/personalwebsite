@@ -9,8 +9,6 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
   <style>
   html,body {
     width: 100%;
@@ -62,6 +60,7 @@
     position: relative;
     padding-top: 7.5%;
     padding-bottom: 7.5%;
+    height: 50%;
   }
   a:hover {
     text-decoration: none;
@@ -125,6 +124,23 @@
     margin-left: 1%;
     margin-top: 2%;
   }
+  .ic {
+    width: 80px;
+    height: 80px;
+  }
+  #gh {
+    width: 60px;
+    height: 60px;
+  }
+  #gh:hover {
+    width: 100px;
+    height: 100px;
+  }
+  .ic:hover {
+    width: 120px;
+    height: 120px;
+  }
+
 
   </style>
 </head>
@@ -158,17 +174,16 @@
           <p id="name">Ronaldo Cedras</p>
           <p id="based">South Africa, WC</p>
           <p id="study">Stellenbosch University</p>
-          <span>
-            <a id="gh" class="container" href="https://github.com/ronaldo0010">
-              <img width="50" height="50" src="https://image.flaticon.com/icons/svg/25/25231.svg">
+          <span id="icon-row">
+            <a class="container" href="https://github.com/ronaldo0010">
+              <img id="gh" src="{{ url_for('static', filename='/images/github.svg') }}" class="ic">
             </a>
 
             <a id="ig" class="container" href="https://www.instagram.com/ronaldo_cedras/">
-              <img width="50" height="50" src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300">
+              <img src="{{ url_for('static', filename='/images/instagram.svg') }}" class="ic">
             </a>
-
             <a id="li" class="container" href="https://za.linkedin.com/in/ronaldo-cedras-80b7a9162">
-              <img width="50" height="50" src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg">
+              <img src="{{ url_for('static', filename='/images/linkedin.svg') }}" class="ic">
             </a>
           </span>
         </ul>
@@ -178,6 +193,7 @@
     {% block content %}
 
     {% endblock%}
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     </body>
 </html>
