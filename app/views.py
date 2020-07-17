@@ -6,11 +6,15 @@ from flask import Flask, render_template, request
 def index():
     return render_template('about.html')
 
-
 @app.route('/projects', methods = ['GET'])
 def projects():
     return render_template('projects.html')
 
+@app.before_request
+def before_request():
+    if request.url.startswith('http://'):
+        url = request.url.replace("http://", "https://", 1)
+        return redirect(url)
 
 @app.route('/sent', methods = ['POST', 'GET'])
 def send():
