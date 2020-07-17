@@ -13,8 +13,8 @@ def projects():
 @app.before_request
 def before_request():
     if request.url.startswith('http://'):
-        url = request.url.replace("http://", "https://", 1)
-        return redirect(url)
+        url = request.url.replace('http://', 'https://', 1)
+        return redirect(url, code=301)
 
 @app.route('/sent', methods = ['POST', 'GET'])
 def send():
