@@ -1,6 +1,9 @@
 from app import app, mail
 from flask_mail import Mail, Message
 from flask import Flask, render_template, request
+from werkzeug.utils import secure_filename
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
 
 @app.route('/', methods = ['POST', 'GET'])
 def index():
@@ -21,3 +24,16 @@ def send():
     mail.send(msg)
 
     return '<h1>Message sent</h1>'
+
+
+@app.route('/upload')
+def submit_file():
+   return render_template('upload.html')
+	
+@app.route('/uploader', methods = ['GET', 'POST'])
+def upload_file():
+   if request.method == 'POST':
+      f = request.files['file']
+      f.save(secure_filename(f.filename))
+      return 'file uploaded successfully'
+
